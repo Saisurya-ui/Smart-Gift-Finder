@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Signup</title>
-<link rel="stylesheet" href="style.css">
+    <title>Signup - Smart Gift Finder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="form-box">
 
-<h2>Create Account</h2>
+    <h2>Create Account</h2>
 
-<form action="/signup" method="POST">
+    <form onsubmit="signupUser(event)">
 
-<input type="text" name="name" placeholder="Enter your name" required>
+        <input type="text" id="name" placeholder="Enter your name" required>
 
-<input type="email" name="email" placeholder="Enter your email" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
 
-<input type="password" name="password" placeholder="Enter password" required>
+        <input type="password" id="password" placeholder="Enter password" required>
 
-<button type="submit">Signup</button>
+        <button type="submit">Sign Up</button>
 
-</form>
+    </form>
 
-<p>Already have an account?</p>
-
-<a href="/login.html">Login here</a>
+    <p>Already have an account?</p>
+    <a href="login.html">Login here</a>
 
 </div>
+
+<script>
+function signupUser(event) {
+    event.preventDefault(); // stop reload
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if(name && email && password){
+        alert("Account created successfully!");
+        window.location.href = "login.html"; // redirect to login
+    } else {
+        alert("Please fill all fields");
+    }
+}
+</script>
 
 </body>
 </html>
