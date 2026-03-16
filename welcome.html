@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Welcome</title>
-<link rel="stylesheet" href="style.css">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="container">
 
-<h1 id="welcomeText"></h1>
+    <h1 id="welcomeText">Welcome!</h1>
 
-<p>Start the Gift Personality Quiz to find the perfect gift 🎁</p>
+    <p>Start the Gift Personality Quiz to find the perfect gift 🎁</p>
 
-<a href="quiz.html">
-<button class="start-btn">Start Quiz</button>
-</a>
+    <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
 
 </div>
 
 <script>
-
-const params = new URLSearchParams(window.location.search);
-const name = params.get("name");
-
-document.getElementById("welcomeText").innerText =
-"Welcome " + name + "!";
-
+function startQuiz() {
+    window.location.href = "quiz.html";
+}
 </script>
 
 </body>
