@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Gift Recommendation Quiz</title>
-<link rel="stylesheet" href="style.css">
+    <title>Gift Recommendation Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="quiz-page">
@@ -11,13 +11,12 @@
 
 <h2>Gift Personality Quiz</h2>
 
-<form action="/quiz" method="post">
+<form onsubmit="generateGift(event)">
 
 <div class="question">
 <label>Person you want to gift:</label>
-<input type="text" name="receiver" placeholder="Enter name" required>
+<input type="text" id="receiver" placeholder="Enter name" required>
 </div>
-
 
 <div class="question">
 <p>1. What does this person enjoy the most?</p>
@@ -26,72 +25,77 @@
 <label><input type="radio" name="type" value="creative"> Art / Creativity</label>
 <label><input type="radio" name="type" value="adventure"> Travel / Adventure</label>
 <label><input type="radio" name="type" value="reader"> Reading books</label>
-
 </div>
 
-
 <div class="question">
-
 <p>2. How do they usually spend free time?</p>
 
-<label><input type="radio" name="hobby" value="gaming"> Playing games</label>
+<label><input type="radio" name="hobby" value="gaming" required> Playing games</label>
 <label><input type="radio" name="hobby" value="drawing"> Drawing / Designing</label>
 <label><input type="radio" name="hobby" value="travel"> Traveling</label>
 <label><input type="radio" name="hobby" value="reading"> Reading</label>
-
 </div>
 
-
 <div class="question">
-
 <p>3. Which personality describes them best?</p>
 
-<label><input type="radio" name="personality" value="fun"> Fun loving</label>
+<label><input type="radio" name="personality" value="fun" required> Fun loving</label>
 <label><input type="radio" name="personality" value="calm"> Calm and relaxed</label>
 <label><input type="radio" name="personality" value="explorer"> Explorer / adventurous</label>
-
 </div>
 
-
 <div class="question">
-
 <p>4. What type of gifts do they usually like?</p>
 
-<label><input type="radio" name="giftstyle" value="useful"> Useful items</label>
+<label><input type="radio" name="giftstyle" value="useful" required> Useful items</label>
 <label><input type="radio" name="giftstyle" value="creative"> Handmade / creative</label>
 <label><input type="radio" name="giftstyle" value="luxury"> Stylish / luxury</label>
-
 </div>
 
-
 <div class="question">
-
 <p>5. What is their favorite activity?</p>
 
-<label><input type="radio" name="activity" value="music"> Listening to music</label>
+<label><input type="radio" name="activity" value="music" required> Listening to music</label>
 <label><input type="radio" name="activity" value="sports"> Playing sports</label>
 <label><input type="radio" name="activity" value="art"> Art and crafts</label>
 <label><input type="radio" name="activity" value="books"> Reading books</label>
-
 </div>
-
 
 <div class="question">
-
 <p>6. What kind of person are they?</p>
 
-<label><input type="radio" name="social" value="introvert"> Introvert</label>
+<label><input type="radio" name="social" value="introvert" required> Introvert</label>
 <label><input type="radio" name="social" value="extrovert"> Extrovert</label>
 <label><input type="radio" name="social" value="balanced"> Balanced</label>
-
 </div>
-
 
 <button type="submit">Get Gift Recommendation</button>
 
 </form>
 
 </div>
+
+<script>
+function generateGift(event) {
+    event.preventDefault();
+
+    let type = document.querySelector('input[name="type"]:checked').value;
+
+    let gift = "";
+
+    if(type === "tech") {
+        gift = "🎧 Headphones or Smart Gadget";
+    } else if(type === "creative") {
+        gift = "🎨 Art Kit or DIY Craft Set";
+    } else if(type === "adventure") {
+        gift = "🎒 Travel Backpack or Trip Voucher";
+    } else {
+        gift = "📚 A Bestselling Book";
+    }
+
+    alert("Recommended Gift: " + gift);
+}
+</script>
 
 </body>
 </html>
