@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +16,14 @@
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "mysql": "^2.18.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saisurya-ui/Smart-Gift-Finder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Saisurya-ui/Smart-Gift-Finder/issues"
+  },
+  "homepage": "https://github.com/Saisurya-ui/Smart-Gift-Finder#readme"
 }
