@@ -93,7 +93,7 @@ function generateGift(event) {
         gift = "📚 A Bestselling Book";
     }
 
-    alert("Recommended Gift: " + gift);
+window.location.href = "result.html?gift=" + encodeURIComponent(gift);
 }
 </script>
 

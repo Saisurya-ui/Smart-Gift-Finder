@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gift Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎁 Your Gift Recommendation</h1>
+
+    <h2 id="giftText"></h2>
+
+    <h3>🛒 Buy Online:</h3>
+    <a id="amazonLink" target="_blank">View on Amazon</a>
+
+    <h3>📍 Nearby Stores:</h3>
+    <a id="mapsLink" target="_blank">Find Nearby Stores</a>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const gift = params.get("gift");
+
+document.getElementById("giftText").innerText = gift;
+
+// Amazon search link
+document.getElementById("amazonLink").href =
+"https://www.amazon.in/s?k=" + encodeURIComponent(gift);
+
+// Google Maps nearby stores
+document.getElementById("mapsLink").href =
+"https://www.google.com/maps/search/" + encodeURIComponent(gift);
+</script>
+
+</body>
+</html>
