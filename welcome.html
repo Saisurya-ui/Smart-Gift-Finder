@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 id="welcomeText"></h1>
+
+<p>Start the Gift Personality Quiz to find the perfect gift 🎁</p>
+
+<a href="quiz.html">
+<button class="start-btn">Start Quiz</button>
+</a>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const name = params.get("name");
+
+document.getElementById("welcomeText").innerText =
+"Welcome " + name + "!";
+
+</script>
+
+</body>
+</html>

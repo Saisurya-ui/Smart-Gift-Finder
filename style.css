@@ -1,0 +1,258 @@
+body{
+font-family: Arial;
+background: linear-gradient(to right, #8e2de2, #ff6a88);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:0;
+}
+
+.container{
+text-align:center;
+color:white;
+}
+
+.buttons a{
+text-decoration:none;
+padding:12px 25px;
+background:white;
+color:#8e2de2;
+margin:10px;
+border-radius:25px;
+font-weight:bold;
+}
+
+.form-box{
+background:white;
+padding:40px;
+border-radius:10px;
+width:300px;
+text-align:center;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#8e2de2;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+}
+
+a{
+color:#8e2de2;
+text-decoration:none;
+}
+/* Quiz page background */
+
+.quiz-page{
+background: linear-gradient(120deg,#6a11cb,#2575fc);
+min-height:100vh;
+padding:40px 0;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Quiz container */
+
+.quiz-container{
+background:white;
+width:650px;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+/* Title */
+
+.quiz-container h2{
+text-align:center;
+margin-bottom:25px;
+color:#333;
+}
+
+
+/* Questions */
+
+.quiz-container p{
+font-weight:bold;
+margin-top:20px;
+margin-bottom:10px;
+color:#444;
+font-size:16px;
+}
+
+
+/* Text input */
+
+.quiz-container input[type="text"]{
+width:100%;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+margin-top:5px;
+margin-bottom:20px;
+font-size:14px;
+}
+
+
+/* Options */
+
+.quiz-container label{
+display:block;
+margin-bottom:8px;
+cursor:pointer;
+font-size:14px;
+}
+
+
+/* Radio buttons */
+
+.quiz-container input[type="radio"]{
+margin-right:8px;
+}
+
+
+/* Submit button */
+
+.quiz-container button{
+width:100%;
+padding:14px;
+background:#2575fc;
+border:none;
+border-radius:6px;
+color:white;
+font-size:16px;
+cursor:pointer;
+margin-top:25px;
+font-weight:bold;
+}
+
+
+/* Button hover */
+
+.quiz-container button:hover{
+background:#1a5ed8;
+}
+.question{
+margin-bottom:20px;
+}
+
+.quiz-container label{
+display:block;
+margin-bottom:6px;
+cursor:pointer;
+}
+/* gift result page */
+
+.gift-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+padding:30px;
+}
+
+.gift-card{
+width:220px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+padding:15px;
+text-align:center;
+background:white;
+transition:0.3s;
+}
+
+.gift-card:hover{
+transform:scale(1.05);
+}
+
+.gift-card img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.gift-card h3{
+margin:10px 0;
+}
+
+.price{
+font-weight:bold;
+color:#2575fc;
+font-size:18px;
+}
+
+.gift-card button{
+padding:8px 15px;
+border:none;
+background:#2575fc;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.gift-card button:hover{
+background:#1a5ed8;
+}
+.gift-buttons{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-top:10px;
+}
+
+.buy-btn{
+background:#ff9900;
+color:white;
+border:none;
+padding:8px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.buy-btn:hover{
+background:#e68900;
+}
+
+.nearby-btn{
+background:#34a853;
+color:white;
+border:none;
+padding:8px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.nearby-btn:hover{
+background:#2c8e46;
+}
+.start-btn{
+background:#2575fc;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+margin-top:20px;
+}
+
+.start-btn:hover{
+background:#1a5ed8;
+}
