@@ -1,46 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login - Smart Gift Finder</title>
-    <link rel="stylesheet" href="style.css">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
 <div class="form-box">
+<h2>Login</h2>
 
-    <h2>Login</h2>
+<form action="/login" method="POST">
+<input type="email" name="email" placeholder="Enter Email" required>
+<input type="password" name="password" placeholder="Enter Password" required>
+<button type="submit">Login</button>
+</form>
 
-    <form onsubmit="loginUser(event)">
-
-        <input type="email" id="email" placeholder="Enter Email" required>
-
-        <input type="password" id="password" placeholder="Enter Password" required>
-
-        <button type="submit">Login</button>
-
-    </form>
-
-    <p>Don't have an account?</p>
-    <a href="signup.html">Sign Up</a>
-
+<a href="signup.html">Create Account</a>
 </div>
-
-<script>
-function loginUser(event) {
-    event.preventDefault(); // stop form submission
-
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-
-    if(email && password){
-        alert("Login successful!");
-        window.location.href = "welcome.html"; // redirect after login
-    } else {
-        alert("Please enter valid details");
-    }
-}
-</script>
-
 </body>
 </html>
